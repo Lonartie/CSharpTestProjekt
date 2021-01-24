@@ -14,7 +14,7 @@ namespace UnitTestProject1
         [Test]
         public void BadTest()
 		{
-            Assert.AreEqual(4, 1 + 2);
+            Assert.AreEqual(3, 1 + 2);
 		}
     }
 }

@@ -105,12 +105,12 @@ namespace UnitTestProject2
 		[Test]
 		public void Point1SubtractionTests()
 		{
-			var p1 = new Point1<float>() + new Point1<float>(2.0f);
-			Assert.That(2.0, Is.EqualTo(p1.X).Within(0.01).Percent);
+			var p1 = new Point1<float>() - new Point1<float>(2.0f);
+			Assert.That(-2.0, Is.EqualTo(p1.X).Within(0.01).Percent);
 			Assert.AreEqual(typeof(float), p1.X.GetType());
 
-			var p2 = new Point1<double>(2.0) + new Point1<double>(5.0);
-			Assert.That(7.0, Is.EqualTo(p2.X).Within(0.01).Percent);
+			var p2 = new Point1<double>(2.0) - new Point1<double>(5.0);
+			Assert.That(-3.0, Is.EqualTo(p2.X).Within(0.01).Percent);
 			Assert.AreEqual(typeof(double), p2.X.GetType());
 		}
 

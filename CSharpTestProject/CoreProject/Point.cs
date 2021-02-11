@@ -8,7 +8,7 @@ namespace CoreProject
 	/// <typeparam name="T">Type of the point components</typeparam>
 	public class Point1<T>
 	{
-		/* CTORS */
+		/* ============ CTORS ============ */
 
 		/// <summary>
 		/// Constructor default initializing X with 'default'
@@ -21,7 +21,7 @@ namespace CoreProject
 		/// <param name="X">The initial value of X-Component</param>
 		public Point1(T X) => this.X = X;
 
-		/* OPERATORS */
+		/* ============ OPERATORS ============ */
 
 		/// <summary>
 		/// Addition operator which adds component-wise
@@ -41,7 +41,7 @@ namespace CoreProject
 		public static Point1<T> operator -(Point1<T> a, Point1<T> b)
 			=> new Point1<T>((dynamic)a.X - b.X);
 
-		/* METHODS */
+		/* ============ METHODS ============ */
 
 		/// <summary>
 		/// Calculates the magnitude (length as vector) of the point
@@ -57,7 +57,7 @@ namespace CoreProject
 		public virtual Point1<T> Normalized()
 			=> new Point1<T>((dynamic)X / Magnitude());
 
-		/* MEMBERS */
+		/* ============ MEMBERS ============ */
 
 		/// <summary>
 		/// X-Component of the Point
@@ -71,7 +71,7 @@ namespace CoreProject
 	/// <typeparam name="T">Type of the point components</typeparam>
 	public class Point2<T> : Point1<T>
 	{
-		/* CTORS */
+		/* ============ CTORS ============ */
 
 		/// <summary>
 		/// Constructor default initializing X and Y with 'default'
@@ -86,7 +86,7 @@ namespace CoreProject
 		public Point2(T X, T Y)
 			: base(X) => this.Y = Y;
 
-		/* OPERATORS */
+		/* ============ OPERATORS ============ */
 
 		/// <summary>
 		/// Addition operator which adds component-wise
@@ -108,7 +108,7 @@ namespace CoreProject
 			=> new Point2<T>(((a as Point1<T>) - (b as Point1<T>)).X,
 				(dynamic)a.Y - b.Y);
 
-		/* METHODS */
+		/* ============ METHODS ============ */
 
 		/// <summary>
 		/// Calculates the magnitude (length as vector) of the point
@@ -125,7 +125,7 @@ namespace CoreProject
 			=> new Point2<T>((dynamic)X / Magnitude(),
 				(dynamic)Y / Magnitude());
 
-		/* MEMBERS */
+		/* ============ MEMBERS ============ */
 
 		/// <summary>
 		/// Y-Component of the Point
@@ -139,7 +139,7 @@ namespace CoreProject
 	/// <typeparam name="T">Type of the point components</typeparam>
 	public class Point3<T> : Point2<T>
 	{
-		/* CTORS */
+		/* ============ CTORS ============ */
 
 		/// <summary>
 		/// Constructor default initializing X, Y and Z with 'default'
@@ -155,7 +155,7 @@ namespace CoreProject
 		public Point3(T X, T Y, T Z)
 			: base(X, Y) => this.Z = Z;
 
-		/* OPERATORS */
+		/* ============ OPERATORS ============ */
 
 		/// <summary>
 		/// Addition operator which adds component-wise
@@ -179,7 +179,7 @@ namespace CoreProject
 				((a as Point2<T>) - (b as Point2<T>)).Y,
 				(dynamic)a.Z - b.Z);
 
-		/* METHODS */
+		/* ============ METHODS ============ */
 
 		/// <summary>
 		/// Calculates the magnitude (length as vector) of the point
@@ -197,7 +197,7 @@ namespace CoreProject
 				(dynamic)Y / Magnitude(),
 				(dynamic)Z / Magnitude());
 
-		/* MEMBERS */
+		/* ============ MEMBERS ============ */
 
 		/// <summary>
 		/// Y-Component of the Point

@@ -30,7 +30,7 @@ namespace CoreProject
 		/// <param name="b">Second point</param>
 		/// <returns>The sum of the two points</returns>
 		public static Point1<T> operator +(Point1<T> a, Point1<T> b)
-			=> new Point1<T>((dynamic)a.X + b.X);
+			=> new Point1<T>((dynamic)a.X - b.X);
 
 		/// <summary>
 		/// Subtraction operator which subs component-wise

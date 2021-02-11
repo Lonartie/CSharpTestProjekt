@@ -76,7 +76,7 @@ namespace CoreProject
 		/// <summary>
 		/// Constructor default initializing X and Y with 'default'
 		/// </summary>
-		public Point2() : base() => Y = default;
+		public Point2() => Y = default;
 
 		/// <summary>
 		/// Constructor to initialize X- and Y-Component
@@ -144,7 +144,7 @@ namespace CoreProject
 		/// <summary>
 		/// Constructor default initializing X, Y and Z with 'default'
 		/// </summary>
-		public Point3() : base() => Z = default;
+		public Point3() => Z = default;
 
 		/// <summary>
 		/// Constructor to initialize X-, Y- and Z-Component
